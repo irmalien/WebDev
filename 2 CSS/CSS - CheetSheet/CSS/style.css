@@ -1,0 +1,204 @@
+/*reset all elements to default
+*{
+    margin:0;
+    padding:0;
+}
+*/
+
+body{
+    background-color: #F4f4f4;
+    color: #555555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:16px;
+    font-weight: normal;
+    /* shorter version
+    font: normal 16px Arial, Helvetica, sans-serif;
+    */
+    line-height: 1.6em;
+    margin:0;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover{
+    color: green;
+}
+
+
+.button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.button:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.container{
+    width: 80%;
+    max-width: 960px;
+    /*create auto margin on left and right side from contained element*/
+    margin: auto;
+    /*top right bottom left
+    margin: 5px 10px 5 px 10px;
+    margin top and bottom, left and right
+    margin: 5px 10px;
+    */
+}
+
+/*Nodzēš iepriekšejos Float parametrus*/
+.clr{
+    clear: both;
+}
+
+.box-1 {
+    background-color: #666;
+    color: #fff;
+    border-right: red solid;
+    border: red solid;
+    border-width: 3px;
+    border-bottom-width: 10px;
+    border-top-style: dotted;
+
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+    /*margins are on outside of object*/
+    margin:30px 0px;
+}
+
+.box-1 h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: -0.0em;
+    word-spacing: 1em;
+}
+
+.box-2{
+    border: 2px dotted blue;
+    padding: 20px;
+    margin: 20px;
+}
+
+.categories{
+    border: 1px #ccc solid;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.categories h2 {
+    text-align: center;
+}
+
+.categories ul{
+    padding: 0;
+    list-style: square;
+}
+
+.categories li{
+    padding-bottom: 6px;
+    border-bottom: dotted 1px #333;
+    /* list with image bullet
+    list-style-image: url(checkmark.png);
+    */
+}
+
+.my-form{
+    padding:20px;
+    border: 2px dotted blue;
+}
+
+.my-form .form-group{
+    padding-bottom: 15px;
+}
+
+.my-form label{
+    display: block;
+}
+
+.my-form input[type="text"], input[type="email"], .my-form textarea{
+    width:90%;
+    padding: 20px;
+}
+
+.block{
+    float: left;
+    width: 33.3%;
+    border: 1px solid;
+    padding: 10px;
+    /*Pieskaņo ka laukuma objekti nepārsniedz kopējo laukuma lielumu*/
+    box-sizing: border-box;
+}
+
+#main-block{
+    float: left;
+    /*calculate size*/
+    width: calc((100%/3)*2);
+    box-sizing: border-box;
+}
+
+#sidebar{
+    float: right;
+    width: calc(100%/3);
+    background-color: #fff;
+    color: #000000;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.p-box{
+    width: 800px;
+    height: 500px;
+    border: 2px solid #000;
+    margin-top: 30px;
+    /*parent elements ir relative lai iekšēji absolute elementi ņemtu koordinātes šeit*/
+    position: relative;
+    background-image: url('../images/bgimage.jpg');/*address relative to css file*/
+    /* background-position: 100px 200px;*/
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.p-box h1{
+    /*child elements ir absolue attiecībā pret parent elementu*/
+    position: absolute;
+    top:40px;
+}
+
+.p-box h2{
+    /*child elements ir absolue attiecībā pret parent elementu*/
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+}
+
+.fix-me{
+    /*Position is fixed relative to current view and always visible, i.e. navbar*/
+    position: fixed;
+    top:400px;
+}
+
+.my-list li:first-child{
+    background: #555555;
+    color: #ccc;
+
+}
+
+.my-list li:last-child{
+    background: purple;  
+}
+
+.my-list li:nth-child(5){
+    background: yellow;
+}
+
+.my-list li:nth-child(even){
+    background-color: #fff;
+}

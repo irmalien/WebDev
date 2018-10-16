@@ -1,0 +1,82 @@
+JS
+- interpreted lang.(dont need compilation)
+- Runs on clients browser (works with static pages)
+- object based (prototype based)
+- Javascript is scripting language
+
+Fundamentals
+- variables
+- arrays
+- loops
+- conditionals (if, switch)
+- comparisons & operators
+- objects
+- functions
+- program flow
+- data types
+- prototypes (aka objects)
+- events (aka hover, click)
+
+What can be done with JS
+- Put html content on fly
+- reponsive webpage
+- detect user browsers etc
+- create cookies
+- validate forms
+- create animations slideshows
+- build apps with JS frameworks (Angular, ReactJS, BackboneJS, etc.)
+node.js - js for server
+
+JavaScript can "display" data in different ways:
+
+- Writing into an HTML element, using innerHTML.
+- Writing into the HTML output using document.write().
+- Writing into an alert box, using window.alert().
+- Writing into the browser console, using console.log().
+
+
+Variables
+- Number
+- String
+- Array
+- Object
+- Symbols in variables: letters, numbers, underscores, dollarSigns
+- begins with letters
+- case sensitive
+- CamelCase thisIsCamelase
+- Partial case - MuFavoriteNumber
+- Underscore - my_favorite_number
+
+Arrays
+- multiple values in single variable
+
+Loops
+- for
+- While
+- for each
+
+Contitionals
+- else if
+- switch
+
+Notations
+1=1 //assign value
+1=='1' //same value
+1===1 //same values and type
+&& //and
+|| //or
+
+Objects
+- Object literal
+- Constructors
+- Contructor pattern
+- Arrays of objects
+
+Events DOM
+- onchange	An HTML element has been changed
+- onclick	The user clicks an HTML element
+- onmouseover	The user moves the mouse over an HTML element
+- onmouseout	The user moves the mouse away from an HTML element
+- onkeydown	The user pushes a keyboard key
+- onload	The browser has finished loading the page
+https://www.w3schools.com/jsref/dom_obj_event.asp

@@ -1,0 +1,26 @@
+https://www.youtube.com/watch?v=JJSoEo8JSnc
+
+FlexBox
+Arrange items in container
+- No Floats
+- Responsive
+- Positioning child elements
+- Order of elements can be changed
+
+- Alter item to fit in containers available space
+- Works in both directions(hor and ver) "main" and "cross" axes
+- Works well for small sizes (grid works better for large)
+
+Properties
+display: flex | inline-flex
+flex-direction: row | collumn (will flip direction of main and cross axis)
+flex-wrap: wrap | nowrap | wrapreverse
+flex-basis: <length> (width for items)
+>justify-content: flex-start | flex-end | center (align content in main axis)
+align-self: flex-start | flex-end | center
+> align-items: flex-start | flex-end | center (align content in cross axis)  
+align-content: flex-start | flex-end | center (cross axis) align content with multilines
+flex-grow: <number>
+flex-shrink: <number>
+flex: <integer>
+order: <integer>

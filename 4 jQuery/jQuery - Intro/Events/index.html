@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jQuery selectors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!--jQuery Google CDN-->    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+    body{
+        font-size: 17px;
+        font-family: arial;
+        background-color: #f4f4f4;
+        line-height: 1.5em;
+    }
+    header{
+        background: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 4px #000 solid;
+        margin-bottom: 10px;
+    }
+    #container{
+        width: 90%;
+        margin:auto;
+        padding:10px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>jQuey crash course</h1>
+    </header>
+    <div id="container">
+        <h3>Mouse events</h3>
+        <button id="btn1" class="btnclass">Button 1</button>
+        <button id="btn2">Button 2</button>
+        <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam omnis architecto, inventore id necessitatibus est nulla laboriosam. A, molestiae fugiat nam ipsa recusandae itaque et quam alias, sapiente est nostrum.</p>
+        <h1 id="coords"></h1>
+        <hr>
+        <form id="form">
+            <label>Name</label><br>
+            <input type="text" id="name" name="name">
+            <br>
+            <label>Email</label><br>
+            <input type="text" id="email" name="email">
+            <br>
+            <label>Gender</label><br>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script>
+        //$(document).ready(function()); //Do something when document is ready
+        /*
+        $('#btn1').click(function(){
+            alert('Button clicked')
+        });
+        $('#btn1').on('click', function(){ //Same as previous, just longer.
+            alert('Button clicked') 
+        })
+        $('#btn1').click(function(){
+            $('#text').toggle();
+        })
+
+        $('#btn2').click(function(){
+            $('#text').hide();
+        });
+        $('#btn1').dblclick(function(){
+            alert('double click')
+        });
+        $('#btn1').hover(function(){
+            alert('hover')
+        });
+        $('#btn1').on('mouseenter', function(){
+            alert('mouse enter') 
+        });
+        $('#btn1').on('mouseleave', function(){
+            alert('mouse leave') 
+        });
+        $('#btn1').on('mousemove', function(){
+            alert('mouse leave') 
+        });
+        $('#btn1').on('mousedown', function(){
+            alert('mouse down') 
+        });
+        $('#btn1').on('mouseup', function(){
+            alert('mouse down') 
+        });
+
+        $('#btn1').click(function(e){ //e- report all functions. currentTarget- report current
+            // console.log(e.currentTarget.id)
+            //alert(e.currentTarget.className);
+        });
+        $('#btn1').on('mousemove', function(e){
+            $('#coords').html('Coords: Y: '+e.clientY+" X: "+e.clientX); //append- add, html-place
+        })
+        */
+        $('input').focus(function(){
+            $(this).css('background', 'pink')
+        })
+        $('input').blur(function(){
+            $(this).css('background', 'white')
+        })
+        $('input').keyup(function(){
+            console.log(e.target.value); //will write whatever we are writing
+        })
+        $('inout#gender').change(function(e){
+            alert(e.target.value);
+        })
+        $('#form').submit(function(e){
+            e.preventDefault();
+            var name = $('input#name').val();
+            console.log('sumbited');
+        })
+
+
+    </script>
+</body>
+</html>

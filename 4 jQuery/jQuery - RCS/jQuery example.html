@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+    <title>CSS Template</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        * {
+        box-sizing: border-box;
+        width: 100%;
+        }
+        body {
+            font-family: Roboto, Helvetica, sans-serif;
+            
+        }
+        h1 {
+            font-size: 25pt
+        }
+        h2 {
+            font-size: 20pt
+        }
+        h3 {
+            font-size: 18pt
+        }
+        p {
+            font-size: 12pt;
+            font-family: Georgia, serif;
+        }
+        header {
+            background-color: #243441;
+            padding: 30px;
+            text-align: left;
+            font-size: 25px;
+            color: white;
+        }
+        nav {
+            float: top;
+            width: 100%;
+            height: 50px;
+            background:#A0A78C;
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type:square;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            background-color: #f1f1f1;
+            color: black;
+        }
+
+        /* Clear floats after the columns */
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color:#445952;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+        }
+}
+
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <h2>This is headline in header</h2>
+    </header>    
+    <section>
+        <nav>
+            <ul>
+                <li>List item 1</li>
+                <li>List item 2</li>
+            </ul>
+        </nav>  
+        <article>
+            <div id="toggle">Show and hide</div>
+            <h3 id="headline">Headline h3</h3>
+            <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+            <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+        <button id="button";>Something button</button>
+        <button id="changestyle";>Change style</button>
+        </article>
+    </section>
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+</body>
+<!--Scriptus parasti novieto dokumenta beigās-->
+<script 
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+  <!--Scriptus parasti novieto dokumenta beigās-->
+  <script>
+      $(document).ready(function(){
+          $("#button").click(function(){
+
+            //$("#button").append("<button>aa</button>");
+            $("#button").replaceWith("<button>Something button 2</button>");
+            $("#headline").replaceWith("This is new headline");
+            //console.log("hello jQuery"); //console lieto lai pārbaudītu vai script strādā
+            })
+            $("#changestyle").click(function(){
+                $("h3").css("font-size", "50px");
+                $("article").css("background-color", "green");
+                $("article").css("color", "white");
+                $("footer").css("background-color", "red");
+            })
+      });
+  </script>

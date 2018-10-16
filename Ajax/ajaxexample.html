@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Ajax example</title>
+    </head>
+    <body>
+        <button id="button">Get poster</button>
+        <div id="container">
+            <img src =''alt = ''>
+        </div>
+
+    </body>
+</html>
+
+<script 
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function(){
+            $("#button").click(function(){
+                $.get(
+                    "http://www.omdbapi.com/?apikey=4a1cb752&i=tt0118715",
+                    function(data){
+                        console.log(data);
+                        $("#container").append("<img src ='"+data.Poster+"'alt = '"+data.Title+ "' >");
+                    });
+                
+            });
+    });
+</script>

@@ -1,0 +1,7 @@
+Positioning in CSS
+- Static
+- Relative
+- Absolute
+- Fixed
+- Initial
+- Inherit (take position from parent)

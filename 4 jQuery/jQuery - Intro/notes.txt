@@ -1,0 +1,13 @@
+What is jQuery
+- small, fast, feature rich JS library
+- DOM, Ajax easier
+- Much less code
+
+Subjects
+- Selectors (CSS, ID, Class )
+- Events (mouse, form)
+- DOM(Document object model) manipulation
+- Methods
+- Effect & Animation (fade in/out, )
+- Ajax (load, get post)
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jQuery selectors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!--jQuery Google CDN-->    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <style>
+    body{
+        font-size: 17px;
+        font-family: arial;
+        background-color: #f4f4f4;
+        line-height: 1.5em;
+    }
+    header{
+        background: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 4px #000 solid;
+        margin-bottom: 10px;
+    }
+    #container{
+        width: 90%;
+        margin:auto;
+        padding:10px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>jQuey crash course</h1>
+    </header>
+    <div id="container">
+        <h1 id="heading1">Heading One</h1>
+        <p id="para1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis eum, doloribus cupiditate veritatis est alias itaque placeat doloremque? <span>Error,</span> eveniet. Veritatis mollitia deserunt recusandae sint placeat aliquam dignissimos aut obcaecati.</p>
+        <h1 class="heading2">Heading One</h1>
+        <p class="para2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis eum, doloribus cupiditate veritatis est alias itaque placeat doloremque? <span>Error,</span> eveniet. Veritatis mollitia deserunt recusandae sint placeat aliquam dignissimos aut obcaecati.</p>
+        <ul id="list">
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ul>
+        <input type="button" value="Button 1">
+        <input type="submit" value="Button 1">
+        <input type="text">
+        <a href="http://www.google.com">Google</a>
+        <a href="http://www.yahoo.com">Yahoo</a>
+    </div>
+    <script>
+    //SELECTORS
+    //$('h1').hide(); //grab id and hide type
+    //$('h1#heading1').hide(); //grab id and hide id
+    //$('.heading2').hide(); //grab id and hide class  
+    $('p span').css('color', 'red')
+    $('ul#list li:first').css('color', 'red')
+    $('ul#list li:last').css('color', 'green')
+    $('ul#list li:even').css('background', 'yellow')
+    $('ul#list li:odd').css('background', '#cccccc')
+    $('ul#list li:nth-child(3n)').css('list-style', 'none')
+    $(':button').hide(); //select pseudo 
+    $('[href]').css('color', 'red'); //select attribute
+    $('[href="http://www.yahoo.com"]').css('color', 'green'); //select atribute with define value
+    //$('*').hide(); //hide everything
+    </script>
+</body>
+</html>

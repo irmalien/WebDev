@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    width: 100%;
+    }
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+.collumn {
+    width: 100%;
+    
+}
+
+@media (max-width: 600px) {
+    .collumn {
+        width: 30%;
+        height: auto;
+}
+}
+@media (max-width: 992px) {
+    .collumn {
+        width: 50%;
+        height: auto;
+}
+}
+@media (max-width: 1200px) {
+    .collumn {
+        width: 100%;
+        height: auto;
+}
+}

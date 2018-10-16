@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/style.css" />
+    <script src="Scripts/main.js"></script>
+</head>
+<body id="body">
+    <div class="header">
+        <h1 id="heading">Learning Javascript</h1>
+        <p>With Mikus Vanags</p>
+    </div>
+    <div class="container">
+        <button onclick="doClick()">Click Me function</button>
+        <br> 
+        <button onclick="this.innerHTML = 'You Clicked!'">Inline script</button>
+        <br> 
+        <button id="myButton" onclick="changeText()">Change text</button>
+        <br> 
+        <button id="myButton" onmouseover="showDate()" onmouseout="clearDate()">Show date</button>
+        <h3 id="time"></h3>
+        <script>
+                function doClick(){
+                    alert('You Clicked!');
+                }
+                function changeText(){
+                    var heading = document.getElementById('heading'); //Define variable from html ID
+                    heading.innerHTML = 'You Clicked!'; //inner html == html saturn
+                }
+                function showDate(){
+                    var time = document.getElementById('time');
+                    time.innerHTML = Date();
+                }
+                function clearDate(){
+                    var time = document.getElementById('time');
+                    time.innerHTML = '';
+                }
+            
+                </script>
+    </div>
+    <div class="container">
+		<form id="myForm" action="something.php" name="myForm" onsubmit="return validateForm()">
+        	<div>
+				<label>First name</label>
+				<input type="text" name="firstName" id="firstName"/>
+			</div>
+			<br>
+			<div>
+				<label>Last name</label>
+				<input type="text" name="lastName" id="lastName"/>
+			</div>
+			<br>
+			<!--
+			<div>
+				<label>Background</label>
+				<select name="background" id="background" onchange="changebackground(this)">
+					<option value="red">Red</option>
+					<option value="blue">Bue</option>
+					<option value="green">Green</option>
+				</select>
+			</div>
+			-->
+			<br>
+			<input type="submit" value="Submit">
+        </form>
+        <script>
+            function changebackground(x){
+                console.log(x.value);
+                var body = document.getElementById('body')
+                heading.style.color = x.value;
+			}
+			function validateForm(){
+				var firstName = document.forms["myForm"]["firstName"].value;
+				if(firstName == null || firstName == ""){
+					alert("First name is required!")
+					return false;
+				}
+				if(firstName.length < 3){
+					alert("Shorter than 3 characters")
+					return false;
+				}
+			}
+        </script>
+
+    </div>
+    <script>
+        //Variables
+        var number1 = 35; //integer
+        var number2 = 35;
+        var string1 = '35'; //string
+        var colors = ['red', 'green', 'blue']; //array
+        var colors2 = new Array('red', 'green', 'blue'); //String array
+        var numbersArray = [5, 77, 43, 'Seven'] //mixed array
+        colors2[2] = 'pink';
+        
+        //Functions
+        colors2.push('purple');
+        numbersArray.length;
+        numbersArray.sort();
+        numbersArray.reverse();
+        
+        //Loops
+        /*
+        for(var i =0; i<=10; i++){
+            console.log('I love the number ' + i);
+        }
+
+        var i = 0;
+        while(i < 10){
+            i++;
+            console.log('I love the number ' + i)
+        }
+       var numbers = [33, 54, 76, 34, 6];
+       numbers.forEach(
+            function(number){
+                console.log(number)
+            });
+       for(var i =0; i <numbers.length; i++){
+            console.log(numbers[i]);}
+        */
+
+       //Conditions
+       /*
+       if(1!=2){
+           console.log("This is true!")
+       }
+       var fruit = "apple";
+       switch(fruit){
+           case "banana": console.log("This is banana!"); break;
+           case "apple": console.log("This is apple!"); break;
+           default: console.log("This is not fruit"); break;
+       }
+       */
+
+       //Objects - literal objects
+       /*
+        var person = {
+            firstName: 'Mikus',
+            lastName: 'Vanags',
+            age: 34,
+            children: ['Gustavs', 'Martins', 'Beatrise'], //objekta masīvs
+            address: { //objekta mainīgais, kas satur citus mainīgos
+                street: 'Storgatan',
+                city: 'Sundsvall',
+                state: 'Vasternorrland',
+                country: 'Sverige'
+            },
+            fullName: function(){ //mainīgais kas apkopo esošos objekta mainīgos
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        console.log(person.fullName());
+        */
+        
+
+        //Object contructor
+        /* hard way
+        var apple = new Object();
+        apple.color = 'red';
+        apple.shape = 'round';
+        
+        apple.describe = function(){
+            return 'An apple is the color '+this.color+' and is shape '+this.shape
+        }
+        console.log(apple.describe());
+        */
+       /*
+       //Contructor pattern
+       function Fruit(name, color, shape){
+           this.name = name;
+           this.color = color;
+           this.shape = shape;
+           this.describe = function(){
+               return this.name+' is the color '+this.color+' and shape is ' + this.shape;
+           }
+       }
+       var apple = new Fruit('apple', 'red', 'round');
+       var melon = new Fruit('melon', 'green', 'round');
+       console.log(melon.describe());
+
+       //Arrays of objects
+       var users = [
+           {
+               name: 'John Doe',
+               age: 30
+           },
+           {
+               name: 'Mark Smith',
+               age: 44
+           },
+           {
+               name: 'Shelly Williams',
+               age: 20
+           },
+       ];
+       console.log(users[0].name)
+       */
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+/* ##### Menu Css ##### */
+
+body{
+    background-color: blue;
+}
+
+.toggle-nav {
+    margin: 1em;
+    float: right;
+    color: #fff;
+    height: 32px;
+  }
+  .toggle-nav:hover {
+    color: #f18c7a;
+  }
+  
+  .toggle-nav-blue,
+  .nav-wrap-blue .menu-item a {
+      color: #27aac5;
+  }.toggle-nav-blue,
+  .nav-wrap-blue .menu-item a:hover{
+      color: #27aac5;
+  }
+  
+  .toggle-nav-blue #nav-icon1 span {
+      background: #27aac5;
+  }
+  
+  @media screen and (max-width: 650px){
+      .toggle-nav-blue #nav-icon1.open span {
+          background: #fff;
+      }
+  }
+  
+  
+  
+  
+  .menu {
+    margin: 1em 0 0;
+    float: right;
+    visibility: hidden;
+    position: relative;
+    right: -100%;
+    transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+  }
+  .menu.active {
+    visibility: visible;
+    right: 0;
+    transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+    color: #f18c7a;
+    cursor: pointer;
+  }
+  .menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .menu ul li {
+    margin: 0.5em;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #ffffff;
+     transition: background-color 3.5s ease;
+  }
+  
+  .menu ul li:hover {
+    color: #ffffff;
+    text-decoration: none !important;
+    transition: background-color 3.5s ease;
+  }
+  
+  .menu ul li:hover:before {
+    background-color: #f18c7a;
+      position: absolute;
+      bottom: 0px;
+      content: "";
+      height: 3px;
+      top: 23px;
+      width: 40px;
+      left: calc(50% - 20px);
+      cursor: pointer;
+      transition: background-color 3.5s ease;
+  
+  }
+  
+  .menu-block{
+      width: 100%;
+      position: relative;
+      top: 0px;
+      z-index: 999999999999;
+      font-family: helvetica;
+  }
+  
+  .invativa-logo{
+      display: block;
+      float: left;
+      width: 50%;
+  
+      text-align: left;
+  }
+  .invativa-logo img{
+      height: 50px;
+      padding: 21px 0px 0px 50px;
+  }
+  
+  #nav-icon1 {
+    width: 30px;
+    height: 22px;
+    z-index: 9999999;
+    position: relative;
+    top: -45px;
+    margin: 50px auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  
+  }
+  
+  
+  
+  
+  #nav-icon1 span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 0px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  
+  #nav-icon1 span:nth-child(1) {
+    top: 0px;
+  }
+  
+  #nav-icon1 span:nth-child(2) {
+    top: 9px;
+  }
+  
+  #nav-icon1 span:nth-child(3) {
+    top: 18px;
+  }
+  
+  #nav-icon1.open span:nth-child(1) {
+    top: 9px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  
+  #nav-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+  
+  #nav-icon1.open span:nth-child(3) {
+    top: 9px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  
+  .mobile-menu{
+      visibility: hidden;
+      display: none;
+  }
+  
+  /* ##### Menu Mobile Start #####*/
+  @media screen and (max-width: 650px){
+  
+  .site-header .fixed{
+      position: fixed !important;
+  }
+  
+  .site-header .float-header{
+      background: #27aac5 !important;
+  }
+  
+  .invativa-logo img{
+      height: 40px;
+      padding: 10px 0px 5px 15px;
+      margin-top:10px;
+  }
+  
+      .site-header a{
+          font-size: 30px !important;
+          text-align: center !important;
+      }
+  
+      .mobile.menu a, menu a{
+          font-family: "Source Sans Pro" !important;
+      }
+  
+  
+      .mobile-menu{
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+          color: rgba(255, 255, 255, 0);
+          display: none;
+          visibility: hidden;
+          transition: background-color 2s ease;
+          background-color: rgba(39, 170,197, 0);
+          z-index: 2;
+  
+      }
+      .mobile-menu ul{
+          position: relative;
+          top: 0px;
+          margin-top: 30px    ;
+          height: 300px;
+          width: 100%;
+          padding-left: 0px;
+  
+  
+      }
+      .mobile-menu ul li{
+          text-decoration: none;
+          cursor: pointer;
+          list-style-type: none;
+          text-transform: uppercase;
+          line-height: 60px;
+          font-size: 24px;
+          text-align: center;
+      }
+      .mobile-menu.active{
+          visibility: visible;
+          color: rgba(255, 255, 255, 1);
+          background-color: rgba(39, 170,197, 1);
+          transition: .5s ease-in-out;
+          display: block;
+          cursor: pointer;
+  
+  
+      }
+      .menu-hide{
+          display: none;
+      }
+  
+      .invativa-logo-mobile{
+      display: block;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      }
+      .invativa-logo-mobile img{
+          display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: 50px;
+      margin-top: 100px;
+      }
+  
+  
+  
+  
+  }
+  /* ##### Menu Mobile End #####*/
+  
+  /* ##### Menu Css End ##### */
